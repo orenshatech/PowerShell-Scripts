@@ -2,7 +2,7 @@ $computer = hostname
 $edgeExtAPI = "https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid"
 
 #Power BI Streaming Dataset
-$endpoint = "https://api.powerbi.com/beta/09c030fe-3571-4a28-8929-0ccac75ce583/datasets/8fa4ed11-171e-4c84-ac23-64b9287c72e5/rows?experience=power-bi&key=fUj0ZV7vgcNj%2Bl8vpGqP2PS1sgpG7OIZREFt1N8XvRbzu%2BnhA4NJUL0gXMk2zXicTSrjwToUy5QAXDJuGjycWg%3D%3D"
+$endpoint = ""
 
 #Get Extensions in Default Profile of Edge
 $Ext = Get-ChildItem "$env:LOCALAPPDATA\Microsoft\Edge\User Data\Default\Extensions" | 
