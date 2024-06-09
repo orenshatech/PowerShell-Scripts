@@ -1,9 +1,9 @@
 [CmdletBinding()]
 param (
     [Parameter(Mandatory=$true)]
-    $file1 = "C:\Users\arctu\OneDrive - Orensha\Data\Test.json",
+    $file1,
     [Parameter(Mandatory=$true)]
-    $file2 = "C:\Users\arctu\OneDrive - Orensha\Data\Test1.json"
+    $file2
 )
 
 
