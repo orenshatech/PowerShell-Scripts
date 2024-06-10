@@ -28,13 +28,13 @@ $notEqual = @()
 
 foreach ($item in $json1){
 
-    $compareItem = $json2 | where-object {$_.$idField -eq $item.idField}
+    $compareItem = $json2 | where-object {$_.$idField -eq $item.$idField}
     
     $item | get-member -MemberType NoteProperty | foreach-object {
         $Name = $_.Name
         try {
             if($Item.$Name -ne $compareItem.$Name){
-                $notEqual += [ordered]@{
+                $notEqual += [pscustomobject]@{
                     id = $compareItem.$id;
                     field = $Name;
                     orignal = $Item.$Name;
@@ -43,8 +43,8 @@ foreach ($item in $json1){
             }
         }
         catch {
-            $notEqual += [ordered]@{
-                id = $compareItem.user_id;
+            $notEqual += [pscustomobject]@{
+                id = $compareItem.$id;
                 field = $Name;
                 orignal = $Item.$Name;
                 change = ""
