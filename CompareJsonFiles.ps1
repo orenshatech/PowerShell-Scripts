@@ -35,18 +35,18 @@ foreach ($item in $json1){
         try {
             if($Item.$Name -ne $compareItem.$Name){
                 $notEqual += [pscustomobject]@{
-                    id = $compareItem.$id;
+                    id = $compareItem.$idField;
                     field = $Name;
-                    orignal = $Item.$Name;
+                    original = $Item.$Name;
                     change = $compareItem.$Name
                 }
             }
         }
         catch {
             $notEqual += [pscustomobject]@{
-                id = $compareItem.$id;
+                id = $compareItem.$idField;
                 field = $Name;
-                orignal = $Item.$Name;
+                original = $Item.$Name;
                 change = ""
             }
         }
