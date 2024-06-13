@@ -12,7 +12,7 @@ param (
 )
 
 #Create PS Objects based on datatype
-if($dataType = "json"){
+if($dataType -eq "json"){
 
     $original = get-content $file1 | ConvertFrom-Json
     $compare = get-content $file2 | ConvertFrom-Json
