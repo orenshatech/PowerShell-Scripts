@@ -65,7 +65,7 @@ foreach ($item in $object1){
                 #Check if items being compared are both PS Objects, in which case we recursively run the function, else we create an object with differences
                 if($Item.$Name -is [PSCustomObject] -and $compareItem.$Name -is [PSCustomObject]){
                     Write-Verbose "Entering Recurse for $Name and $id"
-                    Compare-MyObjects -json1 $Item.$Name -json2 $compareItem.$Name -recurse ($recurse + $Name + ".") 
+                    Compare-MyObjects -object1 $Item.$Name -object2 $compareItem.$Name -recurse ($recurse + $Name + ".") 
                 }else {
                     Write-Verbose "Adding element from $Name and $id"
                      
@@ -97,4 +97,4 @@ foreach ($item in $object1){
 }
 
 #run the function with the script input
-Compare-MyObjects -json1 $original -json2 $compare
+Compare-MyObjects -object1 $original -object2 $compare
