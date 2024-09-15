@@ -10,7 +10,7 @@ This is an excellent tool for finding large files that are taking up space and m
 .PARAMETER FileSize
 The size of the file (in MB) to query against (returns all files above this size).
 .PARAMETER Directory
-The Directory to search in all User Directories.  The Default is "Downloads", but it could be set to blank ("") to query all Directories.
+The Directory to search in all User Directories.  The Default is "Downloads".
 .PARAMETER OutPath
 The path you want the result file to be created.
 .EXAMPLE
